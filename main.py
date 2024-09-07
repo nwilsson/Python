@@ -168,7 +168,7 @@ def combat(playerHealth, playerDamage, player_hit_chance, enemy):
     elif action == 2:
       # Dodge mechanic
       dodge_chance = random.random()
-      if dodge_chance < 0.5:
+      if dodge_chance < 0.8:
         print(f"You successfully dodged the {enemy['name']}'s attack!")
       else:
         print(f"You failed to dodge the {enemy['name']}'s attack!")
@@ -183,7 +183,7 @@ def combat(playerHealth, playerDamage, player_hit_chance, enemy):
       run_chance = random.random()
       if run_chance < 0.3:
         print("You successfully escaped the enemy!")
-        return playerHealth
+        break  # Break out of the combat loop if successful
       else:
         print("You failed to escape the enemy!")
 
